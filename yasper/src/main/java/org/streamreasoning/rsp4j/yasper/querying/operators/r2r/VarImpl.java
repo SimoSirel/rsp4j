@@ -16,7 +16,7 @@ public class VarImpl implements VarOrTerm {
 
     @Override
     public String getIRIString() {
-        return null;
+        return "?"+name;//TODO change done here - double chech if it breaks something
     }
 
     @Override

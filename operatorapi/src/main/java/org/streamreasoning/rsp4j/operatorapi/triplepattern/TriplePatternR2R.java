@@ -21,6 +21,7 @@ import org.streamreasoning.rsp4j.api.sds.SDS;
 import org.streamreasoning.rsp4j.api.sds.timevarying.TimeVarying;
 import org.streamreasoning.rsp4j.yasper.querying.operators.r2r.Binding;
 import org.streamreasoning.rsp4j.yasper.querying.operators.r2r.BindingImpl;
+import org.streamreasoning.rsp4j.yasper.querying.operators.r2r.ContinuousTriplePatternQuery;
 import org.streamreasoning.rsp4j.yasper.querying.operators.r2r.VarImpl;
 
 import java.util.ArrayList;

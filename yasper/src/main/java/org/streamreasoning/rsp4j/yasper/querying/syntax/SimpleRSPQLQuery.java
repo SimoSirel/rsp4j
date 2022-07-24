@@ -179,7 +179,7 @@ public class SimpleRSPQLQuery<O> implements RSPQL<O> {
                   RelationToRelationOperator<Graph, Binding> bgp =   createR2R(entry.getValue());
                   RelationToRelationOperator<Graph, Binding> filteredBgp = addFiltersIfDefined(entry.getKey(),bgp);
                   r2rs.put(entry.getKey(), filteredBgp);
-                }else if(windowsToFilters.containsKey(entry.getKey())){
+                }else if(windowsToFilters.containsKey(entry.getKey())){// TODO This should never happen????
                     r2rs.put(entry.getKey(), createFilter(entry.getKey()));
                 }
             }

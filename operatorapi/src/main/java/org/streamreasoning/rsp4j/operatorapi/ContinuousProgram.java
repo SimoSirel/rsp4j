@@ -84,7 +84,11 @@ public class ContinuousProgram<I, W, R, O> extends ContinuousQueryExecutionObser
         if(r2r.getTvgNames().equals(Collections.singletonList("default"))){
           DataSet<W> defaultGraph = task.getDefaultGraph();
           if (defaultGraph != null) {
-            Stream<R> staticBindings = r2r.getR2rOperator().eval(defaultGraph.getContent().stream());
+              long start = System.currentTimeMillis();
+              Stream<R> staticBindings = r2r.getR2rOperator().eval(defaultGraph.getContent().stream());
+              long finish = System.currentTimeMillis();
+              long timeElapsed = finish - start;
+            long c = staticBindings.count();
             cachedStaticBindings.put("default", staticBindings.collect(Collectors.toSet()));
           }
         }
